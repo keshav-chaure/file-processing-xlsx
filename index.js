@@ -47,10 +47,8 @@ let sorceDataToRemove = sorceData.map(a => a['ID']);
 console.log("filed array"+sorceDataToRemove);
 console.log("data :"+data.length+", sorceDataToRemove :"+sorceDataToRemove.length);
 
-let modifiedData = data.filter( ( el ) =>{
-    console.log("el=> "+el['Serial Number']+ " index of "+sorceDataToRemove );
-    let flag = (!(sorceDataToRemove.indexOf( el['Serial Number'] )  < 0));
-    console.log(flag);
+// filter data from 
+let modifiedData = data.filter( ( el ) =>{    
     return ((sorceDataToRemove.indexOf( el['Serial Number'] )  < 0))
 });
 console.log("data :"+data.length);
